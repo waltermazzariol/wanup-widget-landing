@@ -12,19 +12,14 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/viewportchecker.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/logo-nav.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-     /* Note: Try to remove the following lines to see the effect of CSS positioning */
-    .affix {
-        top: 20px;
-        z-index: 9999 !important;
-    }</style>
-    -->
+
       <style>
         #sticky-sidebar {
         position:fixed;
@@ -65,6 +60,7 @@
       }
 
       </style>
+
   </head>
 
   <body data-spy="scroll" data-target="#navbar-lateral" data-offset="90">
@@ -103,13 +99,17 @@
       </div>
     </nav>
 
-    <!-- Page Content -->
-<iframe frameborder="0" scrolling="no" style="width:100%;height:650px;overflow:hidden;" src="https://widgets.wanup.com/booking/hero/9334?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
 
+    <!-- sldier -->
+    <iframe frameborder="0" scrolling="no" style="width:100%;height:650px;overflow:hidden;" src="https://widgets.wanup.com/booking/hero/9334?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
+    <!-- /slider -->
+
+
+  <!-- Page Content -->
    <div class="container-fluid mt-5">
       <div class="row" style="width:90%; margin:auto;">
         <div class="col-12">
-        <h1 class="mb-4 text-center">Hotel Master Room</h1>
+        <h1 class="mb-4 text-center animated fadeInUp">Hotel Master Room</h1>
         <a href="#" class="text-danger text-center"><p>View all rooms ></p></a>
         <div class="whitespace"></div>
 
@@ -148,7 +148,7 @@
     <div class="row p-5 bg-light">
       <div class="row" style="width:90%; margin:auto;">
       <div class="col-md-4">
-        <h3>GALLERY</h3>
+        <h3 class="animated fadeInUp">GALLERY</h3>
         <hr>
         <div class="row" style="width:90%">
         <div class="col-4" style="padding:10px">
@@ -182,7 +182,7 @@
     </div>
 
       <div class="col-md-4">
-        <h3>VIDEO</h3>
+        <h3 class="animated fadeInUp">VIDEO</h3>
         <hr>
         <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pP4Tpk9GZHc?showinfo=0"></iframe>
@@ -196,7 +196,7 @@
       </div>
 
       <div class="col-md-4">
-        <h3>SEARCH BAR</h3>
+        <h3 class="animated fadeInUp">SEARCH BAR</h3>
         <hr>
         <iframe frameborder="0" scrolling="no" style="width:100%;height:420px;overflow:hidden;" src="https://widgets.wanup.com/booking/formulary/9340?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
       </div>
@@ -229,11 +229,12 @@
           <strong>BOOK NOW!</strong>
           <hr>
           <p>  Phone: 888-888-888<br>
-            Mail: reservation@hotel.com</p>
+            Mail: reservation@hotel.com<br>
+            Address: Barcelona, Spain</p>
         </div>
 
         <div class="col-md-4">
-          <strong>RECENT NEWS</strong>
+          <strong>COLORS</strong>
           <hr>
           <ul>
             <li><a href="index.html" class="text-danger">Red</a></li>
@@ -249,7 +250,7 @@
           <a target="_blank" href="#"><img src="http://waltermazzariol.com/wanup/partner_rojo_horizontal_125.png" alt="Wanup partner hotel" scale="0"></a>
           <div class="whitespace"></div>
 
-          <p>Join our loyalty club!get travel cash and enjoy extra club perk</p>
+          <p>Join our loyalty club! get travel cash and enjoy extra club perk.</p>
 
         </div>
 
@@ -262,38 +263,45 @@
   </div>
     <!-- /.container -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Scroll fade -->
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+    	jQuery('.row').addClass("hidden").viewportChecker({
+    	    classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+    	    offset: 100
+    	   });
+    });
+    </script>
+    <!-- / Scroll fade -->
 
     <script>
-$(document).ready(function(){
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});
+        $(document).ready(function(){
+      // Add scrollspy to <body>
+      $('body').scrollspy({target: ".navbar", offset: 50});
 
-  // Add smooth scrolling on all links inside the navbar
-  $("#navbar-lateral a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+      // Add smooth scrolling on all links inside the navbar
+      $("#navbar-lateral a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+          // Store hash
+          var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }  // End if
       });
-    }  // End if
-  });
-});
-</script>
+    });
+    </script>
   </body>
 
 </html>

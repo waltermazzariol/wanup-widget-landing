@@ -13,7 +13,8 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
-
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/ekko-lightbox.css" />
     <!-- Custom styles for this template -->
     <link href="css/logo-nav.css" rel="stylesheet">
 
@@ -33,9 +34,9 @@
         visibility: hidden;
       }
 
-      .nav-pills .nav-link.active{
+      .navbar-light .navbar-nav .nav-link.active{
         background: transparent;
-        font-weight: 700;
+        border-bottom: 3px solid #c8102e!important;
 
       }
 
@@ -49,8 +50,7 @@
       }
 
       .nav-link a:hover {
-        border-bottom: 3px solid #c8102e;
-      }
+
 
       .text-center {
         text-align: center;
@@ -62,10 +62,10 @@
 
   </head>
 
-  <body data-spy="scroll" data-target="#navbar-lateral" data-offset="90">
+  <body data-spy="scroll" data-target="#navbar-main" >
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-lightk fixed-top text-uppercase " style="background-color:#FFF; border-bottom: 1px solid rgba(0,0,0,0.1);">
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-lightk fixed-top text-uppercase " style="background-color:#FFF; border-bottom: 1px solid rgba(0,0,0,0.1);">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/logo.png" width="150px" alt="">
@@ -76,22 +76,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
           <ul class="navbar-nav " style="font-size:14px;">
             <li class="nav-item">
-              <a class="nav-link active" href="#" style="border-bottom: 3px solid #c8102e;">Home</a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Rooms</a>
+              <a class="nav-link" href="#rooms">Rooms</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Reservation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">The Hotel</a>
+              <a class="nav-link" href="#thehotel">The Hotel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Wanup Club</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -100,13 +97,15 @@
 
 
     <!-- sldier -->
-    <iframe frameborder="0" scrolling="no" style="width:100%;height:650px;overflow:hidden;" src="https://widgets.wanup.com/booking/hero/9334?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
+
+      <iframe id="home" frameborder="0" scrolling="no" style="width:100%;height:650px;overflow:hidden;" src="https://widgets.wanup.com/booking/hero/9334?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
+
     <!-- /slider -->
 
 
   <!-- Page Content -->
    <div class="container-fluid mt-5">
-      <div class="row" style="width:90%; margin:auto;">
+      <div id="rooms" class="row" style="width:90%; margin:auto;padding-top: 100px; margin-top: -100px;">
         <div class="col-12">
         <h1 class="mb-4 text-center">Hotel Master Room</h1>
         <a href="#" class="text-danger text-center"><p>View all rooms ></p></a>
@@ -117,27 +116,27 @@
           <img src="img/room1.jpg"  class="img-fluid rounded">
           <div class="whitespace"></div>
           <strong>DELUXE ROOM - ONE KIND BED</strong>
-          <a href="#" class="text-danger"><p>View the room</p></a>
+          <p>This 14 m2 room features air conditioning, flat-screen TV, kettle.</p>
           <div class="whitespace"></div>
-          <iframe frameborder="0" scrolling="no" style="width:250px;height:50px;overflow:hidden;" src="https://widgets.wanup.com/booking/button/9337?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
+          <iframe frameborder="0" scrolling="no" style="width:225px;height:50px;overflow:hidden;" src="https://widgets.wanup.com/booking/button/9337?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
           <div class="whitespace"></div>
         </div>
         <div class="col-md-4">
           <img src="img/room2.jpg"  class="img-fluid rounded">
           <div class="whitespace"></div>
           <strong>SINGLE ROOM - ONE KIND BED</strong>
-          <a href="#" class="text-danger"><p>View the room</p></a>
+          <p>This 35 m2 room features flat-screen TV, additional bathroom, sofa.</p>
           <div class="whitespace"></div>
-          <iframe frameborder="0" scrolling="no" style="width:250px;height:50px;overflow:hidden;" src="https://widgets.wanup.com/booking/button/9337?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
+          <iframe frameborder="0" scrolling="no" style="width:225px;height:50px;overflow:hidden;" src="https://widgets.wanup.com/booking/button/9337?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
           <div class="whitespace"></div>
         </div>
         <div class="col-md-4">
           <img src="img/room3.jpg"  class="img-fluid rounded">
           <div class="whitespace"></div>
           <strong>DELUXE ROOM - ONE KIND BED</strong>
-          <a href="#" class="text-danger"><p>View the room</p></a>
+          <p>This 20 m2 room features kettle, stairway access, wheelchair access.</p>
           <div class="whitespace"></div>
-          <iframe frameborder="0" scrolling="no" style="width:250px;height:50px;overflow:hidden;" src="https://widgets.wanup.com/booking/button/9337?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
+          <iframe frameborder="0" scrolling="no" style="width:225px;height:50px;overflow:hidden;" src="https://widgets.wanup.com/booking/button/9337?token=NTk1MDI2YTU0MmYxZTNmYjI5MjkwODNlZTNlMzQ2ODcwOGM3MjA0MjQxNzRhMGZkNTI3MjJkMjY2YjY3Y2M5Yw"></iframe>
           <div class="whitespace"></div>
         </div>
         <p>&nbsp;</p>
@@ -151,31 +150,31 @@
         <hr>
         <div class="row" style="width:90%">
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_1.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_1.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_1.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_2.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_2.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_2.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_3.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_3.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_3.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_4.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_4.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_4.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_5.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_5.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_5.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_9.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_9.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_9.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_6.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_6.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_6.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_7.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_7.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_7.jpg"  class="img-fluid rounded"></a>
         </div>
         <div class="col-4" style="padding:10px">
-          <img src="img/gallery_8.jpg"  class="img-fluid rounded">
+          <a href="img/gallery_8.jpg" data-toggle="lightbox" data-gallery="gallery-sidebar"><img src="img/gallery_8.jpg"  class="img-fluid rounded"></a>
         </div>
       </div>
     </div>
@@ -207,7 +206,7 @@
 
 
 
-      <div class="row">
+      <div id="thehotel" class="row" style="padding-top: 100px; margin-top: -100px;">
       <div class="jumbotron" style="background:url(img/bg.jpg); background-size: cover; width:100%;background-repeat: no-repeat;background-attachment: fixed;background-position: center top; border-radius:0; min-height:350px;">
         <h2 class="display-3 text-white" style="width:70%; display:block; margin:auto;">About the hotel!</h2>
         <div class="whitespace"></div>
@@ -223,25 +222,26 @@
 
     <div class="row mt-5 bg-light">
 
-      <div class="row mt-5 mb-5"  style="width:90%; margin:auto;">
+      <div id="contact" class="row mt-5 mb-5"  style="width:90%; margin:auto;">
         <div class="col-md-4">
           <strong>BOOK NOW!</strong>
           <hr>
-          <p>  Phone: 888-888-888<br>
-            Mail: reservation@hotel.com<br>
-            Address: Barcelona, Spain</p>
+          <p> <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;Phone: 888-888-888<br>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;Mail: reservation@hotel.com<br>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Address: Barcelona, Spain</p>
         </div>
 
         <div class="col-md-4">
-          <strong>COLORS</strong>
+          <strong>FOLLOW US!</strong>
           <hr>
-          <ul>
-            <li><a href="index.html" class="text-danger">Red</a></li>
-            <li><a href="index_amarillo.html" class="text-danger">Yellow</a></li>
-            <li><a href="index_blue.html" class="text-danger">Blue</a></li>
-            <li><a href="index_green.html" class="text-danger">Green</a></li>
-            <li><a href="index_grey.html" class="text-danger">Grey</a></li>
-          </ul>
+          <br>
+
+          <i class="fa fa-twitter fa-2x" style="margin-right:10px;color:#aaa;" aria-hidden="true"></i>
+          <i class="fa fa-facebook fa-2x" style="margin-right:10px;color:#aaa;" aria-hidden="true"></i>
+          <i class="fa fa-instagram fa-2x" style="margin-right:10px;color:#aaa;" aria-hidden="true"></i>
+          <i class="fa fa-linkedin fa-2x" style="margin-right:10px;color:#aaa;"  aria-hidden="true"></i>
+          <i class="fa fa-google-plus fa-2x" style="margin-right:10px;color:#aaa;" aria-hidden="true"></i>
+
         </div>
         <div class="col-md-4">
           <strong>ENJOY OUR LOYALTY CLUB</strong>
@@ -269,6 +269,16 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/viewportchecker.js"></script>
 
+    <script src="dist/ekko-lightbox.js"></script>
+    <script src="dist/ekko-lightbox.min.js"></script>
+
+
+    <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+    </script>
     <!-- Scroll fade -->
     <script type="text/javascript">
     jQuery(document).ready(function() {
@@ -281,12 +291,12 @@
     <!-- / Scroll fade -->
 
     <script>
-        $(document).ready(function(){
+      $(document).ready(function(){
       // Add scrollspy to <body>
       $('body').scrollspy({target: ".navbar", offset: 50});
 
       // Add smooth scrolling on all links inside the navbar
-      $("#navbar-lateral a").on('click', function(event) {
+      $("#navbar-main a").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
           // Prevent default anchor click behavior

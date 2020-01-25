@@ -1,4 +1,4 @@
-# widget-wanup
+# Landing page with widget demo
 
 Example of a hotel Web using all widgets
 
